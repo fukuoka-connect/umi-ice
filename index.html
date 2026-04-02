@@ -114,12 +114,15 @@
     }
     .hero-bg::after {
       content:''; position:absolute; inset:0;
-      background: linear-gradient(
-        160deg,
-        rgba(10,10,10,0.55) 0%,
-        rgba(10,10,10,0.15) 50%,
-        rgba(10,10,10,0.65) 100%
-      );
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(10,10,10,0.52) 0%, transparent 70%),
+        linear-gradient(
+          160deg,
+          rgba(10,10,10,0.58) 0%,
+          rgba(10,10,10,0.32) 40%,
+          rgba(10,10,10,0.45) 70%,
+          rgba(10,10,10,0.62) 100%
+        );
     }
     .hero-content {
       position:relative; z-index:2;
@@ -132,13 +135,14 @@
       letter-spacing:0.5em; color:var(--gold-l);
       text-transform:uppercase; margin-bottom:28px;
       display:block;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.35);
     }
     .hero-title {
       font-family: var(--font-jp);
       font-size: clamp(4rem,9vw,8rem);
       font-weight:200; color:white; line-height:1.0;
       letter-spacing:0.18em;
-      text-shadow: 0 2px 40px rgba(0,0,0,0.25);
+      text-shadow: 0 2px 24px rgba(0,0,0,0.45), 0 0 80px rgba(0,0,0,0.2);
       margin-bottom:6px;
     }
     .hero-title ruby rt {
@@ -148,7 +152,8 @@
     .hero-subtitle {
       font-family: var(--font-jp); font-weight:200;
       font-size: clamp(0.85rem,1.4vw,1.05rem);
-      color:rgba(255,255,255,0.7); letter-spacing:0.28em;
+      color:rgba(255,255,255,0.85); letter-spacing:0.28em;
+      text-shadow: 0 1px 16px rgba(0,0,0,0.4);
       margin-bottom:48px;
     }
     /* ゴールドラインCTA */
